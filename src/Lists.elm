@@ -17,4 +17,6 @@ name: List Person -> List String
 name peeps = List.map (\peep -> peep.name) peeps
 
 main =
-    text <| toString <| name people
+    text
+        <| toString
+        <| name people
