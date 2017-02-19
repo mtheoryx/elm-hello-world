@@ -2,7 +2,15 @@ module Main exposing (..)
 
 import Html exposing (text)
 
-foo = ["one", "two", 2]
+type alias Person =
+    { name: String
+    , age: Int
+    }
+
+people =
+    [ { name = "Legolas", age = 2931}
+    , { name = "Gimli", age = 139 }
+    ]
 
 main =
-    text <| foo
+    text <| toString <| people
