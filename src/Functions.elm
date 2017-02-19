@@ -2,6 +2,11 @@ module Hello exposing(..)
 
 import Html exposing (text)
 
+politely : String -> String
+politely phrase =
+    "Excuse me, "
+        ++ phrase
+
 ask : String -> String -> String
 ask thing place =
     "is there a "
@@ -10,5 +15,8 @@ ask thing place =
         ++ place
         ++ "?"
 
+askPolitelyAboutFish : String -> String
+askPolitelyAboutFish = politely << (ask "fish")
+
 main =
-    text <| ask "fish" "sock"
+    text <| askPolitelyAboutFish "hat"
