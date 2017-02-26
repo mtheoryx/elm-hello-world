@@ -8,9 +8,12 @@ fruits =
     [ { name = "Orange" }, { name = "Banana" } ]
 
 
-printNumbers : Int -> Html msg
-printNumbers int =
-    li [] [ text <| toString int ]
+printThing : thing -> Html msg
+printThing thing =
+    li [] [ text <| toString thing ]
 
 main =
-    ul [] (List.map printNumbers numbers)
+    div []
+        [ ul [] (List.map printThing numbers)
+        , ul [] (List.map printThing fruits)
+        ]
