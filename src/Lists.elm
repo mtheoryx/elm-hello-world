@@ -1,6 +1,7 @@
 module Main exposing (..)
 
-import Html exposing (text)
+import Html exposing (..)
+import Html.Attributes exposing (..)
 import List
 import Maybe
 
