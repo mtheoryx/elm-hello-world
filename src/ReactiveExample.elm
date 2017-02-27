@@ -8,6 +8,11 @@ import Html.Events exposing (..)
 -- Four Parts
 -- model, update, view
 
+type alias Model =
+    { showFace: Bool }
+
+model: Model
+
 model =
     { showFace = False }
 
